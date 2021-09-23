@@ -2,7 +2,7 @@
   "name": "nodejs-express-ajax-jquery-bootstrap-mongodb",
   "version": "1.0.0",
   "description": "building a NodeJS/Express web-app to POST/GET data from MongDB via Mongoose - Ajax JQuery + Bootstrap view",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
