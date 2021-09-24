@@ -13,7 +13,7 @@ const dbConfig = require('./app/config/mongodb.config.js');
 const mongoose = require('mongoose');
  
 // Connecting to the database
-mongoose.connect(dbConfig.url || process.env.url)
+mongoose.connect(process.env.url || dbConfig.url)
 .then(() => {
     console.log("Successfully connected to MongoDB.");    
 }).catch(err => {
