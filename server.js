@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+require('dotenv').config()
 app.use(bodyParser.json());
  
 app.use(express.static('resources'));
@@ -11,7 +12,7 @@ console.log("the variables are...................." + process.env);
 // Configuring the database
 const dbConfig = require('./app/config/mongodb.config.js');
 const mongoose = require('mongoose');
- 
+
 // Connecting to the database
 mongoose.connect(process.env.URL)
 .then(() => {
