@@ -7,13 +7,13 @@ app.use(express.static('resources'));
  
 global.__basedir = __dirname;
 
-
+console.log("the variables are...................." + process.env);
 // Configuring the database
 const dbConfig = require('./app/config/mongodb.config.js');
 const mongoose = require('mongoose');
  
 // Connecting to the database
-mongoose.connect(process.env.url || dbConfig.url)
+mongoose.connect(process.env.URL)
 .then(() => {
     console.log("Successfully connected to MongoDB.");    
 }).catch(err => {
